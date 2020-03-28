@@ -11,6 +11,6 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'mcr.microsoft.com/iotedge/iotedgedev:latest:stetch-slim'
+  image: 'docker://mcr.microsoft.com/iotedge/iotedgedev:latest:stetch-slim'
   args:
     - ${{ inputs.who-to-greet }}
