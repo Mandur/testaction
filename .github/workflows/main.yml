@@ -23,7 +23,8 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: edgedev_build
         with:
-          iothub_connection_string: ${{ secrets.iothubconnectionstring }}
+          iothub_connection_string: ${{ secrets.iothubconnectionstring }
+        env:
           PKT_FWD_VERSION: 1.0.0
           CONTAINER_REGISTRY_USERNAME: "ads"
           CONTAINER_REGISTRY_PASSWORD: "asd"
