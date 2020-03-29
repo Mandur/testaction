@@ -9,8 +9,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - run: |
-          ls -a
-          ls /home/runner/work/testaction/testaction
+          ls -a .git
+          ls -a .github
       - name: Azure Login
         uses: Azure/login@v1
         with:
