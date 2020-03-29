@@ -14,11 +14,11 @@ jobs:
           repository: 'mandur/iotedge-lorawan-starterkit'
           path: 'lora'
       - run: ls
-      # - name: Azure Login
-      #   uses: Azure/login@v1
-      #   with:
-      #   # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
-      #     creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Azure Login
+        uses: Azure/login@v1
+        with:
+        # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Iot Edge Dev
         uses: ./ # Uses an action in the root directory
         id: edgedev_build
