@@ -1,11 +1,7 @@
 #!/bin/bash
 echo 'start processing'
 echo $iothub_connection_string
-ls /github/home
-
+ls /home/runner/work/testaction/testaction/lora
 echo "***"
-ls /github/workspace
+iotedgedev build -f /home/runner/work/testaction/testaction/lora/LoRaEngine/deployment.test.template.json
 
-echo "***"
-ls /github/workflow
-# iotedgedev setup -i $iothub_connection_string   

@@ -21,6 +21,6 @@ jobs:
       #     creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Iot Edge Dev
         uses: ./ # Uses an action in the root directory
-        id: hello
+        id: edgedev_build
         with:
           iothub_connection_string: ${{ secrets.iothubconnectionstring }}
