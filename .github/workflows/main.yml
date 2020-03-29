@@ -24,3 +24,10 @@ jobs:
         id: edgedev_build
         with:
           iothub_connection_string: ${{ secrets.iothubconnectionstring }}
+          PKT_FWD_VERSION: 1.0.0
+          CONTAINER_REGISTRY_USERNAME: "ads"
+          CONTAINER_REGISTRY_PASSWORD: "asd"
+          CONTAINER_REGISTRY_ADDRESS: "asd"
+          EDGEHUB_ROUTE: "asd"
+          FACADE_SERVER_URL: "asd"
+          FACADE_AUTH_CODE: "asd"
