@@ -18,27 +18,43 @@ jobs:
       #   with:
       #   # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
       #     creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - run: echo "::set-env name=PKT_FWD_VERSION::1.0.0"
+      - run: |
+          echo "::set-env name=PKT_FWD_VERSION::1.0.0"
+          echo "::set-env name=NET_SRV_VERSION::1.0.0"
+          echo "::set-env name=CONTAINER_REGISTRY_USERNAME::1.0.0"
+          echo "::set-env name=CONTAINER_REGISTRY_PASSWORD::1.0.0"
+          echo "::set-env name=CONTAINER_REGISTRY_ADDRESS::1.0.0"
+          echo "::set-env name=NET_SRV_LOGTO_HUB::1.0.0"
+          echo "::set-env name=NET_SRV_LOGTO_UDP::1.0.0"
+          echo "::set-env name=NET_SRV_IOTEDGE_TIMEOUT::1.0.0"
+          echo "::set-env name=NET_SRV_LOG_TO_UDP_ADDRESS::1.0.0"
+          echo "::set-env name=EDGEHUB_ROUTE::1.0.0"
+          echo "::set-env name=RESET_PIN::1.0.0"
+          echo "::set-env name=REGION::1.0.0"
+          echo "::set-env name=PKT_FWD_SPI_SPEED::1.0.0"
+          echo "::set-env name=PKT_FWD_SPI_DEV::1.0.0"
+          echo "::set-env name=FACADE_SERVER_URL::1.0.0"
+          echo "::set-env name=NET_SRV_VERSION::1.0.0"
+          echo "::set-env name=FACADE_AUTH_CODE::asd"
       - name: Iot Edge Dev
         uses: ./ # Uses an action in the root directory
         id: edgedev_build
         with:
           iothub_connection_string: ${{ secrets.iothubconnectionstring }}
         env:
-          PKT_FWD_VERSION: 1.0.0
-          CONTAINER_REGISTRY_USERNAME: "ads"
-          CONTAINER_REGISTRY_PASSWORD: "asd"
-          CONTAINER_REGISTRY_ADDRESS: "asd"
-          NET_SRV_LOG_LEVEL: 0
-          NET_SRV_LOGTO_HUB: true
-          NET_SRV_LOGTO_UDP: false
-          NET_SRV_IOTEDGE_TIMEOUT: 1000
-          NET_SRV_LOG_TO_UDP_ADDRESS: "192.168.1.1"
-          EDGEHUB_ROUTE: "asd"
-          RESET_PIN: 7
-          REGION: "EU"
-          PKT_FWD_SPI_SPEED: 1500
-          PKT_FWD_SPI_DEV: 2
-          FACADE_SERVER_URL: "asd"
-          NET_SRV_VERSION: 1.0.0
+          : "ads"
+          : "asd"
+          : "asd"
+          : 0
+          : true
+          : false
+          : 1000
+          : "192.168.1.1"
+          : "asd"
+          : 7
+          : "EU"
+          : 1500
+          : 2
+          : "asd"
+          : 1.0.0
           FACADE_AUTH_CODE: "asd"
