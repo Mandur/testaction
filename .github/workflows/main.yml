@@ -41,20 +41,3 @@ jobs:
         id: edgedev_build
         with:
           iothub_connection_string: ${{ secrets.iothubconnectionstring }}
-        env:
-          : "ads"
-          : "asd"
-          : "asd"
-          : 0
-          : true
-          : false
-          : 1000
-          : "192.168.1.1"
-          : "asd"
-          : 7
-          : "EU"
-          : 1500
-          : 2
-          : "asd"
-          : 1.0.0
-          FACADE_AUTH_CODE: "asd"
