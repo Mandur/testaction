@@ -10,4 +10,6 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'dockerfile'
+  image: 'mcr.microsoft.com/iotedge/iotedgedev:latest'
+  args:
+    - "sudo iotedgedev build"
