@@ -12,4 +12,7 @@ runs:
   using: 'docker'
   image: 'mcr.microsoft.com/iotedge/iotedgedev:latest'
   args:
-    - sudo iotedgedev build -f $templateFilePath
+    - 'sudo'
+    - 'iotedgedev'
+    - '${{ input.command }}'
+    - '-f ${{ templateFilePath }}'
