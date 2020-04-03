@@ -10,5 +10,5 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'mcr.microsoft.com/iotedge/iotedgedev:latest'
-  args: ['ls', '/github/workspace/lora/LoRaEngine']
+  image: 'mcr.microsoft.com/iotedge/iotedgedev:latest' 
+  args: ['sudo', 'iotedgedev', '${{ inputs.command }}', '-f /github/workspace/lora/LoRaEngine/deployment.test.template.json'] 
