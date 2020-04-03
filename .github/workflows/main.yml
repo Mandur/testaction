@@ -45,4 +45,8 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: edgedev_build
         with:
-          iothub_connection_string: ${{ secrets.iothubconnectionstring }}          
+          command: build
+          iothub_connection_string: ${{ secrets.iothubconnectionstring }}
+          file_path: "$GITHUB_WORKSPACE/lora/LoRaEngine/deployment.test.template.json"
+        env:
+          CONTAINER_REGISTRY_ADDRESS: "Image"
