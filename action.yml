@@ -14,5 +14,5 @@ runs:
   args:
     - 'sudo'
     - 'iotedgedev'
-    - '${{ inputs .command }}'
-    - '-f ${{ templateFilePath }}'
+    - '${{ inputs.command }}'
+    - '-f /github/workspace/lora/LoRaEngine/deployment.test.template.json'
