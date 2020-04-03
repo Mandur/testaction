@@ -5,6 +5,9 @@ inputs:
   iothub_connection_string:  # id of input
     description: 'the iot hub connection string'
     required: true
+  command:  # id of input
+    description: 'the command to run'
+    required: true
 runs:
   using: 'docker'
   image: 'dockerfile'

@@ -46,7 +46,6 @@ jobs:
         id: edgedev_build
         with:
           command: build
-          iothub_connection_string: ${{ secrets.iothubconnectionstring }}
-          file_path: "$GITHUB_WORKSPACE/lora/LoRaEngine/deployment.test.template.json"
         env:
           CONTAINER_REGISTRY_ADDRESS: "Image"
+          templateFilePath: "$GITHUB_WORKSPACE/lora/LoRaEngine/deployment.test.template.json"
