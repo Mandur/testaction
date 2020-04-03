@@ -10,7 +10,7 @@ ensureEnvironmentVariableIsThere () {
 
 echo 'start processing'
 echo "command : $Command"
-
+echo "$GITHUB_WORKSPACE"
 if [ -z "$Command" ]; then
     Command="Build"
 fi

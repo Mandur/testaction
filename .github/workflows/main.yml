@@ -13,7 +13,6 @@ jobs:
         with:
           repository: 'mandur/iotedge-lorawan-starterkit'
           path: 'lora'
-      - run: cat ./lora/LoRaEngine/example.env
       # - name: Azure Login
       #   uses: Azure/login@v1
       #   with:
