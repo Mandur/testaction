@@ -14,5 +14,5 @@ runs:
   args:
     - 'sudo'
     - 'iotedgedev'
-    - '${{ input.command }}'
+    - '${{ inputs .command }}'
     - '-f ${{ templateFilePath }}'
