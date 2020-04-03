@@ -47,4 +47,4 @@ jobs:
           command: build
         env:
           CONTAINER_REGISTRY_ADDRESS: "Image"
-          templateFilePath: "$GITHUB_WORKSPACE/lora/LoRaEngine/deployment.test.template.json"
+          templateFilePath: "/github/workspace/lora/LoRaEngine/deployment.test.template.json"
