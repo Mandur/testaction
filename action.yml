@@ -11,4 +11,4 @@ inputs:
 runs:
   using: 'docker'
   image: 'mcr.microsoft.com/iotedge/iotedgedev:latest'
-  args: ['ls', '/github/workspace/lora']
+  args: ['ls', '/github/workspace/lora/LoRaEngine']
