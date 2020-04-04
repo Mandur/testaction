@@ -5,10 +5,14 @@ inputs:
   iothub_connection_string:  # id of input
     description: 'the iot hub connection string'
     required: true
+  file_path:  # id of input
+    description: 'file path of the manifest file'
+    required: false
+    default: 'deployment.template.json'
   command:  # id of input
     description: 'the command to run'
     required: true
 runs:
   using: 'docker'
   image: 'mcr.microsoft.com/iotedge/iotedgedev:latest' 
-  args: ['pwd'] 
+  args: ['pwd', 'iotedgedev', '${{ inputs.command }}', '-f', '${{ inputs.file_path }}'] 

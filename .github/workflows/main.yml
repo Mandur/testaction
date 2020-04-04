@@ -45,6 +45,7 @@ jobs:
         id: edgedev_build
         with:
           command: build
+          file_path: 'lora/LoRaEngine/deployment.template.json'
         env:
           CONTAINER_REGISTRY_ADDRESS: "Image"
           templateFilePath: "/github/workspace/lora/LoRaEngine/deployment.test.template.json"
