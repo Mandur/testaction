@@ -2,17 +2,17 @@
 name: 'IoT Edge Dev'
 description: 'Iot Edge cli'
 inputs:
-  iothub_connection_string:  # id of input
+  iothub_connection_string:
     description: 'the iot hub connection string'
     required: true
-  file_path:  # id of input
+  file_path:
     description: 'file path of the manifest file'
     required: false
     default: 'deployment.template.json'
-  command:  # id of input
+  command:
     description: 'the command to run'
     required: true
 runs:
   using: 'docker'
   image: 'mcr.microsoft.com/iotedge/iotedgedev:latest' 
-  args: ['pwd', 'iotedgedev', '${{ inputs.command }}', '-f', '${{ inputs.file_path }}'] 
+  args: ['printenv', '>', '.env',';', 'pwd', 'iotedgedev', '${{ inputs.command }}', '-f', '${{ inputs.file_path }}'] 

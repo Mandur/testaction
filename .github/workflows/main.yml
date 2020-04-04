@@ -44,8 +44,9 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: edgedev_build
         with:
-          command: build
+          command: push
           file_path: 'lora/LoRaEngine/deployment.template.json'
         env:
-          CONTAINER_REGISTRY_ADDRESS: "Image"
-          templateFilePath: "/github/workspace/lora/LoRaEngine/deployment.test.template.json"
+          CONTAINER_REGISTRY_ADDRESS: "myloramikou.azurecr.io"
+          CONTAINER_REGISTRY_USERNAME: "myloramikou"
+          CONTAINER_REGISTRY_PASSWORD: "U4fQeKSpaVWUg4GMVIwJDy4=R3J3YOUv"
