@@ -1,5 +1,6 @@
 #!/bin/bash
-
+sudo ls
+sudo printenv
 sudo printenv > .env
 sudo cat .env
 sudo iotedgedev $1 -f $2
