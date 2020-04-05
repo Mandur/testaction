@@ -15,4 +15,4 @@ inputs:
 runs:
   using: 'docker'
   image: 'mcr.microsoft.com/iotedge/iotedgedev:latest' 
-  args: [ 'sudo', 'iotedgedev', '${{ inputs.command }}', '-f', '${{ inputs.file_path }}' ] 
+  args: [ 'printenv' ] 
