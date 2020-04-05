@@ -15,4 +15,4 @@ inputs:
 runs:
   using: 'docker'
   image: 'mcr.microsoft.com/iotedge/iotedgedev:latest' 
-  args: [ "printenv" ] 
+  args: [ "printenv > .env" ] 
