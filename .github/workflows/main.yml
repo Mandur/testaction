@@ -4,6 +4,10 @@ jobs:
   iot_edge_dev:
     runs-on: ubuntu-latest
     name: run IoT Edge Dev
+    env:
+      CONTAINER_REGISTRY_ADDRESS: "myloramikou.azurecr.io"
+      CONTAINER_REGISTRY_USERNAME: "myloramikou"
+      CONTAINER_REGISTRY_PASSWORD: "U4fQeKSpaVWUg4GMVIwJDy4=R3J3YOUv"
     steps:  
       - name: Checkout
         uses: actions/checkout@v2
@@ -46,7 +50,3 @@ jobs:
         with:
           command: push
           file_path: 'lora/LoRaEngine/deployment.template.json'
-        env:
-          CONTAINER_REGISTRY_ADDRESS: "myloramikou.azurecr.io"
-          CONTAINER_REGISTRY_USERNAME: "myloramikou"
-          CONTAINER_REGISTRY_PASSWORD: "U4fQeKSpaVWUg4GMVIwJDy4=R3J3YOUv"
