@@ -15,5 +15,5 @@ inputs:
 runs:
   using: 'docker'
   image: 'mcr.microsoft.com/iotedge/iotedgedev:latest' 
-  entrypoint: "/bin/sh -c" 
+  entrypoint: '/bin/sh -c'
   args: [ "printenv > .env; cat .env; sudo iotedgedev ${{ inputs.command }} -f ${{ inputs.file_path }}" ] 
