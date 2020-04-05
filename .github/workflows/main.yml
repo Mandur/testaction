@@ -57,6 +57,7 @@ jobs:
           NET_SRV_LOG_TO_UDP_ADDRESS: "192.168.1.1"
           EDGEHUB_ROUTE: "asd"
           RESET_PIN: 7
+          myloramikou.azurecr.io: ${{ secrets.ACR_CREDENTIALS }}
           REGION: "EU"
           PKT_FWD_SPI_SPEED: 1500
           PKT_FWD_SPI_DEV: 2

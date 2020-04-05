@@ -1,14 +1,4 @@
 #!/bin/bash
-sudo ls
-
-echo "var" 
-printenv
-echo "sudo var" 
-
-sudo printenv
-sudo printenv > .env
-
-sudo cat .env
 sudo -E iotedgedev $1 -f $2
 
 # First argument is name of env var, second is default value.
