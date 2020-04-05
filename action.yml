@@ -14,5 +14,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'mcr.microsoft.com/iotedge/iotedgedev:latest' 
-  args: [ "printenv > .env" ] 
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.command }}
+    - ${{ inputs.file_path }} 
