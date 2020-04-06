@@ -48,6 +48,7 @@ jobs:
           file_path: 'lora/LoRaEngine/deployment.template.json'
         env:
           CONTAINER_REGISTRY_ADDRESS: "myloramikou.azurecr.io"
+          CONTAINER_REGISTRY_SERVER: "myloramikou.azurecr.io"
           CONTAINER_REGISTRY_USERNAME: "myloramikou"
           CONTAINER_REGISTRY_PASSWORD: ${{ secrets.ACR_CREDENTIALS }}
           NET_SRV_LOG_LEVEL: 0

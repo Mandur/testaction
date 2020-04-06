@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo -E printenv
 sudo -E iotedgedev $1 -f $2
 
 # First argument is name of env var, second is default value.
