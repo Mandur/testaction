@@ -19,10 +19,9 @@ elif [ $1 = "push" ]; then
 elif [ $1 = "deploy" ]; then
     echo "Deploying iot edge module"
     sudo -E iotedgedev genconfig -f $2
-    sudo -E az iot -h
     sudo az extension add --name azure-iot
     sudo -E az iot edge deployment delete --login "$IOTHUB_CONNECTION_STRING" --deployment-id "$IOT_EDGE_DEPLOYMENT_ID"
-    sudo -E az iot edge deployment create --login "$IOTHUB_CONNECTION_STRING" --content "config/deployment.json" --deployment-id "$IOT_EDGE_DEPLOYMENT_ID" --target-condition "deviceId=$DEVICE_ID"
+    sudo -E az iot edge deployment create --login "$IOTHUB_CONNECTION_STRING" --content "config/deployment.json" --deployment-id "$IOT_EDGE_DEPLOYMENT_ID" --target-condition "deviceId='$DEVICE_ID'"
 fi
 
 #push
