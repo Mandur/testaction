@@ -13,6 +13,7 @@ jobs:
         with:
           repository: 'mandur/iotedge-lorawan-starterkit'
           path: 'lora'
+          ref: 'gh-actions'
       # - name: Azure Login
       #   uses: Azure/login@v1
       #   with:
