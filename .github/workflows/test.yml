@@ -1,0 +1,17 @@
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  pull_request:
+    branches:
+      - master
+
+jobs:
+   # Build and deploy Facade Azure Function 
+  deploy_facade_function:
+    name: Build and Deploy Facade Azure Function   
+    runs-on: ubuntu-16.04
+
+    steps:
+    - run: |
+        cat ${{ github }}
+        cat ${{ tojson(github) }}
