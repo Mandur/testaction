@@ -13,4 +13,6 @@ jobs:
 
     steps:
     - run: |
-        echo ${{ tojson(github.event) }} 
+        echo ${{ tojson(github.event.pull_request.labels) }} 
+        echo "**************************************************************************"
+        echo ${{ tojson(github.event.pull_request.labels) }} | jq -r '.[].name'
