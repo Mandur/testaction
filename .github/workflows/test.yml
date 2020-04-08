@@ -13,5 +13,5 @@ jobs:
 
     steps:
     - run: |
-        cat ${{ tojson(github) }} 
-        cat ${{ tojson(github) }} | jq event.pull_request.labels
+        echo ${{ tojson(github) }} 
+        echo ${{ tojson(github) }} | jq -r '.event.pull_request.labels.[].name'
